@@ -1,0 +1,7 @@
+2 Temperature 40 6/12/2017 à 2
+4 Temperature 45 6/12/2017 à 2
+6 Mouvement Absent 4/12/2017 à 16
+6 Mouvement Absent 4/12/2017 à 18
+6 Mouvement Absent 4/12/2017 à 20
+6 Mouvement Absent 4/12/2017 à 22
+8 Temperature 50 6/12/2017 à 2

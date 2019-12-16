@@ -1,0 +1,35 @@
+void modifier_pa(p_agee p1)
+{
+  FILE* f;
+  FILE* f_tmp;
+  p_agee p;
+
+  f=fopen("personne_agee.txt","r");
+  f_tmp=fopen("personne_agee.tmp","w");
+  if (f!=NULL)
+  {
+    while(fscanf(f,"%s %s %s %s %s %s %s %s %s %s %s %s %s\n",p.id,p.nompa,p.prenompa,p.Date.jour,p.Date.mois,
+                                                        p.Date.anne,p.poids,p.taille,p.gs,p.t,p.a,p.d
+                                                        ,p.c)!=EOF)
+          {
+                if (strcmp(p1.id,p.id)!=0)
+                  {
+                    fprintf(f_tmp,"%s %s %s %s %s %s %s %s %s %s %s %s %s\n",p.id,p.nompa,p.prenompa,p.Date.jour,p.Date.mois,
+                                                                        p.Date.anne,p.poids,p.taille,p.gs,p.t,p.a,p.d
+                                                                        ,p.c);
+                  }
+                else
+                  {
+                    fprintf(f_tmp,"%s %s %s %s %s %s %s %s %s %s %s %s %s\n",p1.id,p1.nompa,p1.prenompa,p1.Date.jour,p1.Date.mois,
+                                                                        p1.Date.anne,p1.poids,p1.taille,p1.gs,p1.t,p1.a,p1.d
+                                                                        ,p1.c);
+                  }
+          }
+          fclose(f);
+          fclose(f_tmp);
+
+          remove("personne_agee.txt");
+          rename("personne_agee.tmp","personne_agee.txt");
+  }
+
+}
